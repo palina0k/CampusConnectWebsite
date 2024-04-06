@@ -47,7 +47,7 @@ function PostForm({ addPost }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="What's on your mind?" />
+      <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="What's on your mind?" padding="50px"/>
       <button className="posting-button" type="submit">Post</button>
     </form>
   );

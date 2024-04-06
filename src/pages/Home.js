@@ -7,17 +7,19 @@ export default function Home(){
         <div className="container">
             <div>
                 <div className = "titlecontainer">
-                    <h1 className="title"> Campus Connect</h1>
+                    <h1 className="title">Connect with your fellow Gators to improve the Campus</h1>
+                    <h2 className="subtitle">Voice campus concerns through CampusConnect!</h2>
+                    <Link to="/post">
+                        <button className="home-button">Get Started</button>
+                    </Link>
+                </div>
+                <div className = "titlecontainer">
                     <h2 className="subtitle">Statement</h2>
                     <p className="description">Text here</p>
                     <h2 className="subtitle">Goals</h2>
-                    <p className="description">text here</p>
+                    <p className="description">text here</p >
                 </div>
-                <Link to="/post">
-                    <button className="home-button">Get Started</button>
-                </Link>
             </div>
-            <img src = "https://marcomm.sfsu.edu/sites/default/files/images/donot-marks-.jpg" alt = "San Francisco State University Logo" className='img'/>
         </div>
     );
 }
