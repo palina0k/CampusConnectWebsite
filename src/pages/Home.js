@@ -17,7 +17,7 @@ export default function Home(){
                     <button className="home-button">Get Started</button>
                 </Link>
             </div>
-            <img src = "https://marcomm.sfsu.edu/sites/default/files/images/donot-marks-.jpg" alt = "San Francisco State University Logo"/>
+            <img src = "https://marcomm.sfsu.edu/sites/default/files/images/donot-marks-.jpg" alt = "San Francisco State University Logo" className='img'/>
         </div>
     );
 }
