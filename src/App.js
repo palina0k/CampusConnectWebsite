@@ -4,6 +4,7 @@ import Navbar from './universal/Navbar';
 import Home from './pages/Home';
 import Feed from './pages/Feed';
 import Posting from './pages/Posting';
+import Footer from './universal/Footer';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
               <Route path='/post' element={<Posting/>}/>
             </Routes>
           </div>
+          <Footer/>
       </Router>
     </div>
   );

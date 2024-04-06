@@ -1,5 +1,10 @@
+nav {
+    position: fixed;
+    top:0;
+    width:100%;
+    backdrop-filter: blur(10px);
+}
 .navbar {
-    text-decoration: none;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -9,15 +14,22 @@
 }
 
 button {
-    background-color:#8466a2;
-    color:white;
-    border: 1px; 
-    border-radius:17px; 
     padding:10px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 7px; 
-    
+    border-radius:17px; 
+    border-width: 1px;
+    border-style: solid;
+}
+.primaryButton {
+    background-color:none;
+    border-color: #8466a2;
+}
+.secondaryButton {
+    background-color:#8466a2;
+    border-color: #8466a2;
+    color:white;
 }
 button:hover{
     opacity: 0.5;
