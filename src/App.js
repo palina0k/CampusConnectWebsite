@@ -15,11 +15,11 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/feed' element={<Feed />}></Route>
         <Route path='/post' element={<Posting />}></Route>
-      </Routes> */}
+      </Routes>
     </div>
   );
 }
