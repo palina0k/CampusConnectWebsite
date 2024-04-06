@@ -16,15 +16,11 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <Router>
-        {/* <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='/feed' element={<Feed />}></Route>
-          <Route path='/post' element={<Posting />}></Route>
-        </Routes> */}
-
-      </Router>
-      
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/feed' element={<Feed />}></Route>
+        <Route path='/post' element={<Posting />}></Route>
+      </Routes>
     </div>
   );
 }
