@@ -1,27 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-import {useState } from "react";
-// import {
-//   Routes,
-//   Route,
-//   useRoutes,Router,
-// } from "react-router-dom";
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from "./universal/Navbar.js";
-// import Home from "./pages/Home.js";
-// import Feed from "./pages/Feed.js";
-// import Posting from "./pages/Posting.js";
+import Navbar from './universal/Navbar';
+import Home from './pages/Home';
+import Feed from './pages/Feed';
+import Posting from './pages/Posting';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/feed' element={<Feed />}></Route>
-        <Route path='/post' element={<Posting />}></Route>
-      </Routes>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/post" element={<Posting />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
