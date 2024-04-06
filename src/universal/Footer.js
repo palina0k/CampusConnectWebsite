@@ -14,7 +14,7 @@ export default function Footer(){
                 </a>
             </div>
             <div>
-                <h4 style={{fontWeight:"normal", fontFamily:"sans-serif"}}>© 2024 CampusConnect | Made With &lt;3 In Our First Hackathon</h4>
+                <h4 style={{fontWeight:"normal", fontFamily:"sans-serif"}}>© 2024 CampusConnect | Made With &lt;3 At Our First Hackathon</h4>
             </div>
         </div>
     )
