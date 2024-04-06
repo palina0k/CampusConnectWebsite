@@ -10,7 +10,7 @@ export default function Home(){
             <div className = "titlecontainer">
                 <h1 className="title">Connect with your fellow Gators to improve the Campus</h1>
                 <h2 className="subtitle">Voice campus concerns through CampusConnect!</h2>
-                <Link to="/post">
+                <Link to="/feed">
                     <button className="home-button">Get Started</button>
                 </Link>
                 <img src={alligator2} alt="gator" height={400}/>

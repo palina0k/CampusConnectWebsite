@@ -4,7 +4,7 @@ import './Footer.css'
 
 export default function Footer(){
     return(
-        <div className="footer">
+        <footer className="footer">
             <div>
                 <a href="https://sfhacks-2024.devpost.com/" target="__blank">
                     <img src="https://seeklogo.com/images/D/devpost-logo-95FF685C5D-seeklogo.com.png" alt="devpost_logo" style={{height:30,paddingRight:20,paddingBottom:20}}/>
@@ -16,6 +16,6 @@ export default function Footer(){
             <div>
                 <h4 style={{fontWeight:"normal", fontFamily:"sans-serif"}}>© 2024 CampusConnect | Made With &lt;3 At Our First Hackathon</h4>
             </div>
-        </div>
+        </footer>
     )
 }

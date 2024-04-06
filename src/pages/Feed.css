@@ -21,7 +21,10 @@
   }
   
   .post-feed {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
+    overflow-y: auto;
   }
   
   .post {
