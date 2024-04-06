@@ -14,7 +14,7 @@ export default function Home(){
                 <p className="description">text here</p>
             </div>
             <Link to="/post">
-                <button>Get Started</button>
+                <button className="home-button">Get Started</button>
             </Link>
         </div>
     );

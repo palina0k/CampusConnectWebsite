@@ -1,4 +1,36 @@
 .container {
     display: flex;
-    
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row-reverse; 
+}
+
+.img {
+    margin-left: auto;
+}
+.titlecontainer {
+    text-align: left;
+    margin-right: 20px; /* Adjust spacing between image and text */
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+}
+
+.description {
+    font-size: 16px;
+    color: #999;
+}
+
+.home-button{
+    position: absolute;
+    bottom: 20px;
 }
