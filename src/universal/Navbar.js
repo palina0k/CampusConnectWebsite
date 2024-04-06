@@ -3,9 +3,8 @@ import "./Navbar.css"
 
 export default function Navbar(){
     return(
-        <Navbar>
             <nav>
-                <a href="/home">
+                <a href="/">
                     <button>Home</button>
                 </a>
                 <a href="/post">
@@ -15,6 +14,5 @@ export default function Navbar(){
                     <button>Feed</button>
                 </a>
             </nav>
-        </Navbar>
     )
 }
