@@ -8,7 +8,8 @@ import { auth } from '../googleSignin/config';
 
 function Feed() {
   const [posts, setPosts] = useState([]);
-  // const navigate = useNavigate();
+  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [selectedTags, setSelectedTags] = useState([]);
   const[isLoggedIn,setIsLoggedIn]=useState(false)
   const [userData, setUserData]= useState({})
 
@@ -26,7 +27,22 @@ function Feed() {
     return ()=> unsubscribe();
   },[])
 
+  useEffect(()=> {
+    if(selectedTags.length===0){
+      setFilteredPosts(posts);
+    } else {
+      const filtered = posts.filter(post => selectedTags.includes(post.tag));
+      setFilteredPosts(filtered);
+    }
+  }, [posts,selectedTags]);
 
+  const toggleTagFilter=(tag) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(selectedTags.filter(selectedTag => selectedTag !==tag));
+    } else {
+      setSelectedTags([...selectedTags,tag]);
+    }
+  };
 
   const SignUpUsingGoogle = ()=> {
     const provider = new GoogleAuthProvider()
@@ -51,11 +67,6 @@ function Feed() {
     
     console.log("Logout")
   }
-  // const logout =()=>{
-  //   localStorage.clear()
-  //   window.location.reload()
-  //   navigate("/login");
-  // }
 
   useEffect(() => {
     const storedPosts = JSON.parse(localStorage.getItem('posts'));
@@ -91,7 +102,17 @@ function Feed() {
         <div className="feed-container">
           <h1 className="subtitle">Campus Connect Feed</h1>
           <button onClick={Logout}>Logout</button>
-          <PostFeed posts={posts} />
+
+
+          <div className='tag-filter'>
+            <h3>Filter:</h3>
+            <div className='tags'>
+              <button onClick={()=>toggleTagFilter('safety')} className={selectedTags.includes('safety') ? 'selected': ''}>safety</button>
+              <button onClick={()=>toggleTagFilter('tech')} className={selectedTags.includes('tech') ? 'selected': ''}>tech</button>
+              <button onClick={()=>toggleTagFilter('social')} className={selectedTags.includes('social') ? 'selected': ''}>social</button>
+            </div>
+          </div>
+          <PostFeed posts={filteredPosts} />
           <FloatingButton />
         </div>
       </div>
@@ -105,9 +126,9 @@ function PostFeed({ posts }) {
     <div className="post-feed">
       {posts.map(post => (
         <div key={post.id} className="post">
-          <h3>{post.title}</h3>
-          <p>{post.text}</p>
-          <p>#{post.tag}</p>
+          <h3 className='post-text'>{post.title}</h3>
+          <p className='post-text'>{post.text}</p>
+          <p className='post-text' style={{color:'#2a1144'}}>#{post.tag}</p>
         </div>
       ))}
     </div>

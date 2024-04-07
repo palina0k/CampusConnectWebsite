@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import Feed from './pages/Feed';
 import Posting from './pages/Posting';
 import Footer from './universal/Footer';
-import SignIn from './googleSignin/signin';
+// import SignIn from './googleSignin/signin';
 import './App.css';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
               <Route path='/' element= {<Home/>}/>
               <Route path='/feed' element={<Feed/>}/>
               <Route path='/post' element={<Posting/>}/>
-              <Route path='/login' element={<SignIn/>}/>
+              {/* <Route path='/login' element={<SignIn/>}/> */}
             </Routes>
           </div>
           <Footer/>
