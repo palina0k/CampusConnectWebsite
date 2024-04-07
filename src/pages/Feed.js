@@ -1,5 +1,4 @@
 import React from 'react';
-import './Feed.css'; 
 import { useState, useEffect } from 'react';
 import "./Feed.css";
 

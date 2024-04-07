@@ -32,12 +32,6 @@ button:hover {
     opacity: 1;
 }
 
-.titlecontainer {
-    text-align: center;
-    justify-content: center;
-    padding-right: 10px;
-}
-
 .title {
     font-size: 36px;
     font-weight: bold;
