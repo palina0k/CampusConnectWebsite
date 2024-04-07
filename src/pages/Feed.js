@@ -107,7 +107,7 @@ function PostFeed({ posts }) {
         <div key={post.id} className="post">
           <h3>{post.title}</h3>
           <p>{post.text}</p>
-          <p>Tag: {post.tag}</p>
+          <p>#{post.tag}</p>
         </div>
       ))}
     </div>
