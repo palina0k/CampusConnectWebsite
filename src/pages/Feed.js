@@ -13,6 +13,8 @@ function Feed() {
   const[isLoggedIn,setIsLoggedIn]=useState(false)
   const [userData, setUserData]= useState({})
 
+  
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth,(result)=> {
       console.log({result});
@@ -122,6 +124,12 @@ function Feed() {
 }
 
 function PostFeed({ posts }) {
+  const [likes, setLikes] = useState(0);
+
+  // Function to handle like button click
+  const handleLike = () => {
+    setLikes(likes + 1);
+  };
   return (
     <div className="post-feed">
       {posts.map(post => (
@@ -129,6 +137,8 @@ function PostFeed({ posts }) {
           <h3 className='post-text'>{post.title}</h3>
           <p className='post-text'>{post.text}</p>
           <p className='post-text' style={{color:'#2a1144'}}>#{post.tag}</p>
+          <button onClick={handleLike}>Like</button>
+          <span>{likes} likes</span>
         </div>
       ))}
     </div>
