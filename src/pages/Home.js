@@ -16,10 +16,12 @@ export default function Home(){
                 <img src={alligator2} alt="gator" height={250}/>
             </div>
             <div className = "titlecontainer">
-                <h2 className="subtitle">Statement</h2>
-                <p className="description">Text here</p>
-                <h2 className="subtitle">Goals</h2>
-                <p className="description">text here</p >
+                <h2 className="subtitle">Mission Statement:</h2>
+                <p className="description">Welcome to CampusConnect, where your voice matters. Share your concerns and ideas on our platform to directly influence the decisions made by SFSU's student government. Let's create a positive change on our campus together!</p>
+                <h2 className="subtitle">Our Goals:</h2>
+                <p className="description">1. Facilitate Communication: Our platform allows students to openly express their concerns and ideas, fostering open and transparent communication between the student body and the campus's student government.</p >
+                <p className="description">2. Empower Student Body: Encourage active participation and engagement from the SFSU student body by providing a platform where their voices are heard and where they can directly inform the decision-making process.</p>
+                <p className="description"> 3. Drive Positive Change: Harness the collective input of students to drive positive changes and improvements on campus.</p>
             </div>
         </div>
     );

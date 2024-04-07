@@ -1,5 +1,4 @@
 import React from 'react';
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import './Feed.css'; 
 import { useState, useEffect } from 'react';
 import "./Feed.css";
