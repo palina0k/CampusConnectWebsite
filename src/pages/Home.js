@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import alligator from '../alligator.png'
+// import alligator from '../alligator.png'
 import alligator2 from '../alligator2.png'
 import './Home.css'; 
 
@@ -10,10 +10,10 @@ export default function Home(){
             <div className = "titlecontainer">
                 <h1 className="title">Connect with your fellow Gators to improve the Campus</h1>
                 <h2 className="subtitle">Voice campus concerns through CampusConnect!</h2>
-                <Link to="/feed">
-                    <button className="home-button">Get Started</button>
+                <Link to="/feed" style={{justifyContent:'center',alignContent:'center',alignItems:'center',display:'flex'}}>
+                    <button className='home-button'>Get Started</button>
                 </Link>
-                <img src={alligator2} alt="gator" height={400}/>
+                <img src={alligator2} alt="gator" height={250}/>
             </div>
             <div className = "titlecontainer">
                 <h2 className="subtitle">Statement</h2>
