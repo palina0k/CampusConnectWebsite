@@ -1,13 +1,14 @@
 import React from "react";
 import './Navbar.css'
 import { Link } from 'react-router-dom';
+import logo from '../logo.png'
 
 export default function Navbar(){
     return(
         <nav>
             <div className="navbar">
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/90/San_Francisco_State_Athletics_Monogram.svg/800px-San_Francisco_State_Athletics_Monogram.svg.png" alt="sf_logo" width="50px"/>
+                    <img src={logo} alt="campus_connect_logo" width="300px"/>
                 </div>
                 <div>
                     <Link to = "/" >
