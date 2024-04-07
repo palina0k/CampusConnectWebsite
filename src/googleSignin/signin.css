@@ -1,0 +1,36 @@
+.signin {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px;
+    padding-bottom:100px;
+    width: 100%;
+    background: linear-gradient(180deg,white, #bfb4ca);
+    flex-direction: column;
+    border-width: 5px;
+    border-color: #2a1144;
+}
+.signinbox {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-evenly;
+    flex-direction: column;
+    background: linear-gradient(180deg,#bfb4ca, white);
+    /* height: 200px; */
+    width: 400px;;
+    border-radius: 7px;
+    text-align: center;
+    border-width: 4px;
+    border-color: blueviolet;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    line-height: 0;
+    color: #2a1144;
+}
+.center {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+
+}
