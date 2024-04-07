@@ -89,7 +89,7 @@ function Feed() {
       {isLoggedIn && 
       <div className="feed">
         <div className="feed-container">
-          <h1>Campus Connect Feed</h1>
+          <h1 className="subtitle">Campus Connect Feed</h1>
           <button onClick={Logout}>Logout</button>
           <PostFeed posts={posts} />
           <FloatingButton />

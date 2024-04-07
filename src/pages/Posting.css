@@ -2,6 +2,7 @@
     width: 100%;
     background: linear-gradient(180deg,white, #bfb4ca);
 }
+
 .posting-container {
     display: flex;
     flex-direction: column;
@@ -11,9 +12,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  h1 {
 
-  }
   .post-input {
     padding: 10px;
     width: 60%;
@@ -46,7 +45,7 @@
     border-width: 1px;
     border-style: solid;
     cursor: pointer;
-    margin-bottom: 223px;
+    margin-bottom: 145px;
   }
   
   .post-button:hover {

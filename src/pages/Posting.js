@@ -27,7 +27,7 @@ const [title, setTitle] = useState('');
   return (
     <div className="field">
         <div className="posting-container">
-            <h1>Create a New Post</h1>
+            <h1 className="subtitle">Create a New Post</h1>
             <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" className="post-input" />
             <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="What's on your mind?" className="post-textarea" />
             <select value={tag} onChange={(e) => setTag(e.target.value)} className="post-select">
