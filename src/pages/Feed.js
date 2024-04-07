@@ -1,6 +1,6 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import "./Feed.css";
+import React, { useState, useEffect } from 'react';
+import FloatingButton from './FloatingButton';
+import './Feed.css';
 
 function Feed() {
   const [posts, setPosts] = useState([]);
@@ -16,38 +16,14 @@ function Feed() {
     localStorage.setItem('posts', JSON.stringify(posts));
   }, [posts]);
 
-  const addPost = (text) => {
-    const newPost = {
-      id: Date.now(),
-      text: text
-    };
-    setPosts([newPost, ...posts]);
-  };
-
   return (
-    <div className="Table">
-      <h1>CampusConnect Feed</h1>
-      <PostForm addPost={addPost} />
-      <PostFeed posts={posts} />
+    <div className="feed">
+      <div className="feed-container">
+        <h1>Campus Connect Feed</h1>
+        <PostFeed posts={posts} />
+        <FloatingButton />
+      </div>
     </div>
-  );
-}
-
-function PostForm({ addPost }) {
-  const [text, setText] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!text.trim()) return;
-    addPost(text);
-    setText('');
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <textarea className="placeholder" value={text} onChange={(e) => setText(e.target.value)} placeholder="What's on your mind?" />
-      <button className="posting-button" type="submit">Post</button>
-    </form>
   );
 }
 
@@ -56,7 +32,9 @@ function PostFeed({ posts }) {
     <div className="post-feed">
       {posts.map(post => (
         <div key={post.id} className="post">
-          {post.text}
+          <h3>{post.title}</h3>
+          <p>{post.text}</p>
+          <p>Tag: {post.tag}</p>
         </div>
       ))}
     </div>
