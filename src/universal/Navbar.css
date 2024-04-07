@@ -24,13 +24,13 @@ button {
 }
 .primaryButton {
     background-color:none;
-    border-color: #8466a2;
+    border-color: #7d58a2;
 }
 .secondaryButton {
-    background-color:#8466a2;
-    border-color: #8466a2;
+    background-color:#7d58a2;
+    border-color: #7d58a2;
     color:white;
 }
-button:hover{
-    opacity: 0.5;
+button:hover {
+    background-color:#8e74ac;
 }
